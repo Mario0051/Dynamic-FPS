@@ -8,10 +8,10 @@ import org.spongepowered.asm.mixin.Shadow;
 @Mixin(SplashScreen.class)
 public class SplashScreenMixin implements SplashScreenAccessor {
 	@Shadow
-	private long reloadCompleteTime;
+	private long applyCompleteTime;
 	
 	@Override
 	public boolean isReloadComplete() {
-		return reloadCompleteTime > -1L;
+		return applyCompleteTime > -1L;
 	}
 }
